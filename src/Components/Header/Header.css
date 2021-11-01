@@ -1,0 +1,28 @@
+.header {
+  background-color: rgb(83, 73, 73);
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 2%;
+  color: white;
+}
+
+.title > h1 > a {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  #logo {
+    background-image: url("https://wallpaperaccess.com/full/1118512.jpg");
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 0px;
+    right: 0px;
+    width: 400px;
+    height: 205px;
+  }
+}

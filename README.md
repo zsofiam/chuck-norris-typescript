@@ -1,3 +1,12 @@
+A React application with TypeScript
+
+The application makes a request to the following API: "https://api.chucknorris.io/jokes/categories" and lists them. If you click on any of the categories, a joke from that category is displayed on the screen using the API endpoint "https://api.chucknorris.io/jokes/random?category={category}".
+The application is designed to be well maintainable.
+
+Within the project folder enter in command line:
+npm start
+It will start the development server.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

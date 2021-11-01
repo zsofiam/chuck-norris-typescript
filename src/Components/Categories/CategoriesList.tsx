@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-import { Link } from "react-router-dom";
+import './Categories.css';
 
-export default function Navbar() {
+const CategoriesList = () => {
     let history = useHistory();
     const [categories, setCategories] = useState([]);
   
@@ -16,25 +16,8 @@ export default function Navbar() {
     function handleSelect(event:any) {
       history.push(`/jokes/category=${event.target.value}`);
     }
-  
-    return (
-      <>
-        <div className="navbar">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="#news">News</Link>
-            </li>
-            <li>
-              <Link to="#contact">Contact</Link>
-            </li>
-            <li>
-              <Link to="#about">About</Link>
-            </li>
-          </ul>
-          <div className="custom-select">
+  return (
+    <div className="custom-select">
             <span>Choose a category: </span>
             <select onChange={handleSelect}>
               {categories.map((category) => (
@@ -44,8 +27,7 @@ export default function Navbar() {
               ))}
             </select>
           </div>
-        </div>
-      </>
-    );
-  }
-  
+  );
+};
+
+export default CategoriesList;

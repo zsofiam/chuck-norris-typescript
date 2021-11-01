@@ -1,0 +1,9 @@
+.custom-select {
+  padding-bottom: 1%;
+}
+.custom-select > span {
+  padding: 1%;
+  font-size: larger;
+  overflow: hidden;
+  color: white;
+}
