@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CategoriesList from "./CategoriesList";
+import CategoriesList from "./Categories/CategoriesList";
 
 export default function Navbar() {
     
