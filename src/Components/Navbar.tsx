@@ -12,8 +12,7 @@ export default function Navbar() {
         .get("https://api.chucknorris.io/jokes/categories")
         .then((res) => setCategories(res.data));
     }, []);
-    // (callback:any) => { }
-    
+
     function handleSelect(event:any) {
       history.push(`/jokes/category=${event.target.value}`);
     }
