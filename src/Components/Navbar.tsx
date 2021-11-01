@@ -34,7 +34,7 @@ export default function Navbar() {
               <Link to="#about">About</Link>
             </li>
           </ul>
-          <div className="select">
+          <div className="custom-select">
             <span>Choose a category: </span>
             <select onChange={handleSelect}>
               {categories.map((category) => (
