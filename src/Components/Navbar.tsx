@@ -12,8 +12,7 @@ export default function Navbar() {
         .get("https://api.chucknorris.io/jokes/categories")
         .then((res) => setCategories(res.data));
     }, []);
-    // (callback:any) => { }
-    
+
     function handleSelect(event:any) {
       history.push(`/jokes/category=${event.target.value}`);
     }
@@ -35,7 +34,7 @@ export default function Navbar() {
               <Link to="#about">About</Link>
             </li>
           </ul>
-          <div className="select">
+          <div className="custom-select">
             <span>Choose a category: </span>
             <select onChange={handleSelect}>
               {categories.map((category) => (
