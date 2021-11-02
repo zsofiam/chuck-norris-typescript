@@ -5,17 +5,17 @@ import "./Joke.css";
 
 export default function Joke() {
   const { category } = useParams<{ category?: string }>();
-  const [joke, setJoke] = useState({ value: "" });
+  const [joke, setJoke] = useState<{ value?: string }>({ value: "" });
+  const jokeUrl = `https://api.chucknorris.io/jokes/random?category=${category}`;
 
   useEffect(() => {
-    const jokeUrl = `https://api.chucknorris.io/jokes/random?category=${category}`;
     axios
       .get(jokeUrl)
       .then((res) => setJoke(res.data))
       .catch(function (error) {
         console.log(error);
       });
-  }, [setJoke, category]);
+  }, [jokeUrl]);
 
   return (
     <div className="wrapper">
