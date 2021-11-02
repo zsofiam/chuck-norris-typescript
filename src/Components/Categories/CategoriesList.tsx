@@ -6,14 +6,19 @@ import "./Categories.css";
 const CategoriesList = () => {
   let history = useHistory();
   const [categories, setCategories] = useState([]);
+  const categoriesUrl = "https://api.chucknorris.io/jokes/categories";
 
-  useEffect(() => {
+  const fetchCategories = () => {
     axios
-      .get("https://api.chucknorris.io/jokes/categories")
+      .get(categoriesUrl)
       .then((res) => setCategories(res.data))
       .catch(function (error) {
         console.log(error);
       });
+  };
+
+  useEffect(() => {
+    fetchCategories();
   }, []);
 
   function handleSelect(event: any) {
