@@ -1,11 +1,7 @@
-A React application with TypeScript
+# A React application with TypeScript
 
 The application makes a request to the following API: "https://api.chucknorris.io/jokes/categories" and lists them. If you click on any of the categories, a joke from that category is displayed on the screen using the API endpoint "https://api.chucknorris.io/jokes/random?category={category}".
-The application is designed to be well maintainable.
-
-Within the project folder enter in command line:
-npm start
-It will start the development server.
+The application is designed to be well maintainable and expandable.
 
 # Getting Started with Create React App
 
