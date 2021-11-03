@@ -3,6 +3,12 @@
 The application makes a request to the following API: "https://api.chucknorris.io/jokes/categories" and lists them. If you click on any of the categories, a joke from that category is displayed on the screen using the API endpoint "https://api.chucknorris.io/jokes/random?category={category}".
 The application is designed to be well maintainable and expandable.
 
+# CI/CD
+
+The application is deployed on Azure Portal as a Static Web App:
+https://agreeable-plant-0aacb1703.azurestaticapps.net/
+CI pipeline is configured (please see GitHub Actions).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
