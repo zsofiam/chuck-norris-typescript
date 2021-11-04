@@ -1,15 +1,20 @@
-import React from "react";
-import { render, screen } from "@testing-library/react";
+// import React from "react";
+import { screen, act } from "@testing-library/react";
+// import { render } from "@testing-library/react";
 import App from "./App";
 import * as ReactDOM from "react-dom";
 
-describe("App component tests", () => {
+describe("App links tests", () => {
   let container: HTMLDivElement;
+
   beforeEach(() => {
     container = document.createElement("div");
     document.body.appendChild(container);
-    ReactDOM.render(<App />, container);
+    act(() => {
+      ReactDOM.render(<App />, container);
+    });
   });
+
   afterEach(() => {
     document.body.removeChild(container);
     container.remove();
