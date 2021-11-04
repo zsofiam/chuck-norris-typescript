@@ -6,11 +6,11 @@ import "./Categories.css";
 const CategoriesList = () => {
   let history = useHistory();
   const [categories, setCategories] = useState([]);
-  const categoriesUrl = "https://api.chucknorris.io/jokes/categories";
+  const CATEGORIES_URL = "https://api.chucknorris.io/jokes/categories";
 
   const fetchCategories = () => {
     axios
-      .get(categoriesUrl)
+      .get(CATEGORIES_URL)
       .then((res) => setCategories(res.data))
       .catch(function (error) {
         console.log(error);
